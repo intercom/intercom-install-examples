@@ -29,7 +29,6 @@ function intercomIdentityVerification(req, res, next) {
   next();
 }
 
-// app.set('views', './views');
 app.engine('.hbs', exphbs({ extname: '.hbs' }));
 app.set('view engine', '.hbs');
 
