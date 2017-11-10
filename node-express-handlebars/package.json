@@ -1,0 +1,14 @@
+{
+  "name": "node-express-handlebars",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "intercom-client": "^2.9.1"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}
