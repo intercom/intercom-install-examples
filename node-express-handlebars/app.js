@@ -1,4 +1,5 @@
 var express = require('express');
+// 1. Load IdentityVerfication class
 var IdentityVerification = require('intercom-client').IdentityVerification;
 // Copy your app id and secret key from the guide and store in environment variables or secure key store
 // DO NOT commit your key to your repo
@@ -9,7 +10,7 @@ var app = express();
 
 app.set('view engine', 'pug')
 
-// 1. Fake user loading middleware
+// 2. Fake user loading middleware
 app.use(function(req, res, next) {
   req.user = {
     id: '1',
@@ -18,7 +19,7 @@ app.use(function(req, res, next) {
   next();
 });
 
-// 2. Generate hash using user data and attach to req
+// 3. Generate hash using user data and attach to req
 app.use(function(req, res, next) {
   var userHash = IdentityVerification.userHash({
     secretKey: INTERCOM_SECRET_KEY,
@@ -29,7 +30,7 @@ app.use(function(req, res, next) {
   next();
 });
 
-// 3. Pass hash along with user data to template
+// 4. Pass hash along with user data to template
 app.get('/', function(req, res) {
   res.render('index', {
     intercomAppId: INTERCOM_APP_ID,
