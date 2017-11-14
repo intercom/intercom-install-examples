@@ -1,11 +1,11 @@
-const express = require('express');
-const IdentityVerification = require('intercom-client').IdentityVerification;
+var express = require('express');
+var IdentityVerification = require('intercom-client').IdentityVerification;
 // Copy your app id and secret key from the guide and store in environment variables or secure key store
 // DO NOT commit your key to your repo
-const INTERCOM_SECRET_KEY = 'superSecretKeyKeepMeSafe';
-const INTERCOM_APP_ID = 'notSecretAppId';
+var INTERCOM_SECRET_KEY = 'superSecretKeyKeepMeSafe';
+var INTERCOM_APP_ID = 'notSecretAppId';
 
-const app = express();
+var app = express();
 
 app.set('view engine', 'pug')
 
@@ -20,7 +20,7 @@ app.use(function(req, res, next) {
 
 // 2. Generate hash using user data and attach to req
 app.use(function (req, res, next) {
-  const userHash = IdentityVerification.userHash({
+  var userHash = IdentityVerification.userHash({
     secretKey: INTERCOM_SECRET_KEY,
     identifier: req.user.id || req.user.email
   });
