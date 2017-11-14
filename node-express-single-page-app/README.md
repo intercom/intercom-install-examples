@@ -6,7 +6,7 @@ Simple Node.js API example for booting Intercom from a single page app. In this 
     ```
     npm i -s intercom-client
     ```
-1. Load `IdentityVerification` class,
+1. Load `IdentityVerification` class
     ```js
     var IdentitiyVerification = require('intercom-client').IdentityVerification;
     ```
