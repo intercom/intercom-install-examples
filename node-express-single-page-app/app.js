@@ -9,7 +9,7 @@ var INTERCOM_APP_ID = 'lbz60kgo';
 var app = express();
 app.use(express.static('public'))
 
-// 2. Fake user loading middleware
+// 2. Fake user loading middleware, use real user data in your app
 app.use(function (req, res, next) {
   req.user = {
     id: '1',
@@ -18,23 +18,17 @@ app.use(function (req, res, next) {
   next();
 });
 
-// 3. Generate hash using user data and attach to req
-app.use(function (req, res, next) {
+// 3. Return Intercom settings from endpoint
+app.get('/intercomSettings', function (req, res) {
   var userHash = IdentityVerification.userHash({
     secretKey: INTERCOM_SECRET_KEY,
     identifier: req.user.id || req.user.email
   });
 
-  req.intercomUserHash = userHash;
-  next();
-});
-
-// 4. Pass hash along with user data to template
-app.get('/intercomSettings', function (req, res) {
   res.json({
     app_id: INTERCOM_APP_ID,
     user_id: req.user.id,
-    user_hash: req.intercomUserHash,
+    user_hash: userHash,
   });
 });
 
