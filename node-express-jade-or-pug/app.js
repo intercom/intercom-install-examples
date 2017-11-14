@@ -19,7 +19,7 @@ app.use(function(req, res, next) {
 });
 
 // 2. Generate hash using user data and attach to req
-app.use(function (req, res, next) {
+app.use(function(req, res, next) {
   var userHash = IdentityVerification.userHash({
     secretKey: INTERCOM_SECRET_KEY,
     identifier: req.user.id || req.user.email
