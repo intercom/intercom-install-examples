@@ -3,8 +3,8 @@ var express = require('express');
 var IdentityVerification = require('intercom-client').IdentityVerification;
 // Copy your app id and secret key from the guide and store in environment variables or secure key store
 // DO NOT commit your key to your repo
-var INTERCOM_SECRET_KEY = 'superSecretKeyKeepMeSafe';
-var INTERCOM_APP_ID = 'notSecretAppId';
+var INTERCOM_SECRET_KEY = 'YOUR_SECRET_KEY';
+var INTERCOM_APP_ID = 'YOUR_APP_ID';
 
 var app = express();
 
