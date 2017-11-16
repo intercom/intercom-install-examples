@@ -2,8 +2,8 @@
 
 The easiest way to install Intercom in a rails app is using the IntercomRails gem. The gem automatically inserts a <script> tag containing the Intercom Messenger before the closing </body> tag.
 
-This example app
-Simple Node.js API example for booting Intercom from a single page app. In this example, we just use jQuery to asyncronously load the user data to boot Intercom, but you can apply the same concept to any frontend framework.
+This is a very basic example app that uses the IntercomRails gem to load the messenger for visitors and logged in users.
+There are more detailed instructions on the rails gem github repository [here](https://github.com/intercom/intercom-rails).
 
 1. Add the IntercomRails gem to your Gemfile:
     ```
