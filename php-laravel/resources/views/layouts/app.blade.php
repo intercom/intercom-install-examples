@@ -78,7 +78,7 @@
     <script src="{{ asset('js/app.js') }}"></script>
     <script>
       window.intercomSettings = {
-        app_id: "enobuqn8",
+        app_id: "<YOUR INTERCOM APP ID>",
         email: "{{ Auth::user()->email }}",
         user_hash: "{{$user_hash}}"
       };
