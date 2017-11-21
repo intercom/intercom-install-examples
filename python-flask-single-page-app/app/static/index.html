@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- Latest compiled and minified bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+    <title>Creating a Full-Stack Python Application with NPM, React.js and Webpack</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>Intercom Messenger installation example</h1>
+    <p>You should see the messenger in the bottom right if you set it up correctly!</p>
+
+    <blockquote cite="http://mentalfloss.com/article/56004/16-fun-facts-about-hedgehogs">
+      <p><strong>Did you know?</strong></p>
+      <p>A group of hedgehogs is called an array.</p>
+    </blockquote>
+    <div id="content" />
+    <!-- Intercom Snippet -->
+    <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/<APP_ID>';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+    <!-- Fetch user data and boot Intercom. You can also call this after a user logs in if they are not already authenticated -->
+    <script>
+      $.get('/intercomSettings', function(data) {
+        window.Intercom('boot', data);
+      });
+  </script>
+  </body>
+</html>
