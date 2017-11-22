@@ -8,16 +8,18 @@ Check out the code in this repo to see an example of how to install the Messenge
 
 ## Summary
 
-1. Install the Intercom SDK
+1. Remove `window.intercomSettings` if you added it to your HTML in a previous installation step.
+
+1. Install the Intercom SDK (Server)
     ```
     npm i -s intercom-client
     ```
-1. Load `IdentityVerification` class
+1. Load `IdentityVerification` class (Server)
     ```js
     var IdentityVerification = require('intercom-client').IdentityVerification;
     ```
-1. Load your user data
-1. Generate user hash using your user data with the Intercom SDK
+1. Load your user data (Server)
+1. Generate user hash using your user data with the Intercom SDK (Server)
     ```js
     var userHash = IdentityVerification.userHash({
       secretKey: INTERCOM_SECRET_KEY,
