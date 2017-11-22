@@ -5,6 +5,8 @@ The easiest way to install Intercom in a rails app is using the IntercomRails ge
 This is a very basic example app that uses the IntercomRails gem to load the messenger for visitors and logged in users.
 There are more detailed instructions on the rails gem github repository [here](https://github.com/intercom/intercom-rails).
 
+**If you have already installed the messenger for (logged out) website visitors, this will replace the snippet previously installed. You can remove that code.**
+
 1. Add the IntercomRails gem to your Gemfile:
     ```
     gem "intercom-rails"
