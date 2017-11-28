@@ -10,7 +10,6 @@ import (
 )
 
 type User struct {
-	Id    string
 	Name  string
 	Email string
 }
@@ -34,7 +33,6 @@ func main() {
 		data := HomePageData{
 			IntercomAppId: os.Getenv("INTERCOM_APP_ID"),
 			LoggedInUser: User{
-				Id:    "1234abcd",
 				Name:  "Nikola Tesla",
 				Email: "nikola.tesla@intercom.io",
 			},
