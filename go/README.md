@@ -9,7 +9,7 @@ On the **server side**, return identifying information about the currently logge
 On the **client side**:
 1. Paste the code right before the closing body tag of every page where you want the Intercom Messenger to appear ([see code](https://github.com/intercom/intercom-install-examples/blob/14465ba85d0cfbca63e12a7e72efa1c2294d0d58/go/layout.html#L16)).
 
-*If you have already installed the Intercom Messenger, you only have to update the `window.intercomSettings` with the `user_` attributes for logged-in users.*
+   *If you have already installed the Intercom Messenger, you only have to update the `window.intercomSettings` with the `user_` attributes for logged-in users.*
 
 1. Almost there! Log in to your app in your development environment to test out the installation. You should see a feedback window popup in the bottom right hand corner.
 
