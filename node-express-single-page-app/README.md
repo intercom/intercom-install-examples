@@ -4,7 +4,7 @@ This repo is an example application of the Intercom Messenger on a Node single p
 
 **On the server side**, add an endpoint that will return identifying information about the currently logged in user to the Intercom Messenger.
 
-    *You can also return the user information in the login response instead of a dedicated endpoint if you prefer.*
+*You can also return the user information in the login response instead of a dedicated endpoint if you prefer.*
 
 1. Install the Intercom SDK (Server)
     ```
