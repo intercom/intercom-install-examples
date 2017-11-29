@@ -22,9 +22,9 @@ On the **server side**, add an endpoint that will return identifying information
 **On the client side**, connect to Intercom and load the Messenger:
 1. Paste the code right before the closing body tag of every page where you want the Intercom Messenger to appear like ([see code](https://github.com/intercom/intercom-install-examples/blob/b61c0e4d1f3dd27a0bee3ee5688902355e48e348/node-express-single-page-app/public/index.html#L19).
 
-    *If you have already installed the Intercom Messenger on a page you want to track logged-in users on, remove the `window.intercomSettings` part as we will be using `window.Intercom(‘boot’, …)` to boot the Messenger.*
+    *If you have already installed the Intercom Messenger on a page you want to track logged-in users on, remove the `window.intercomSettings` part as we will be using `window.Intercom('boot', …)` to boot the Messenger.*
 
-1. To make sure people always receive the most relevant messages from you, send an update call using `window.Intercom("update")` to Intercom whenever the view and/or URL changes in your app.
+1. To make sure people always receive the most relevant messages from you, send an update call using `window.Intercom('update')` to Intercom whenever the view and/or URL changes in your app.
 1. Almost there! Log in to your app in your development environment to test out the installation. You should see a feedback window popup in the bottom right hand corner.
 
 If you want to clone this example and get the app up and running locally, make sure you have Node installed.
