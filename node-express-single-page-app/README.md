@@ -2,7 +2,7 @@
 
 This repo is an example application of the Intercom Messenger on a Node single page app using Express. You can follow along and look at how it is implemented in the code.
 
-On the **server side**, add an endpoint that will return identifying information about the currently logged in user to the Intercom Messenger.
+**On the server side**, add an endpoint that will return identifying information about the currently logged in user to the Intercom Messenger.
 
     *You can also return the user information in the login response instead of a dedicated endpoint if you prefer.*
 
