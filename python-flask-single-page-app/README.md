@@ -4,7 +4,7 @@ This repo is an example application of the Intercom Messenger on a Python single
 
 On the **server side**, add an endpoint that will return identifying information about the currently logged in user to the Intercom Messenger.
 
-    *You can also return the user information in the login response instead of a dedicated endpoint if you prefer.*
+*You can also return the user information in the login response instead of a dedicated endpoint if you prefer.*
 
 1. Add a GET route to your app called `/intercomSettings` ([see code](https://github.com/intercom/intercom-install-examples/blob/b61c0e4d1f3dd27a0bee3ee5688902355e48e348/python-flask-single-page-app/app/server/server.py#L13)).
 1. Add a method to the appropriate controller for the new route ([see code](https://github.com/intercom/intercom-install-examples/blob/b61c0e4d1f3dd27a0bee3ee5688902355e48e348/python-flask-single-page-app/app/server/server.py#L14)).
@@ -15,7 +15,7 @@ On the **server side**, add an endpoint that will return identifying information
 **On the client side**, connect to Intercom and load the Messenger:
 1. Paste the code right before the closing body tag of every page where you want the Intercom Messenger to appear like ([see code](https://github.com/intercom/intercom-install-examples/blob/b61c0e4d1f3dd27a0bee3ee5688902355e48e348/python-flask-single-page-app/app/static/index.html#L21)).
 
-*If you have already installed the Intercom Messenger on a page you want to track logged-in users on, remove the `window.intercomSettings` part as we will be using `window.Intercom(‘boot’, …)` to boot the Messenger.*
+    *If you have already installed the Intercom Messenger on a page you want to track logged-in users on, remove the `window.intercomSettings` part as we will be using `window.Intercom(‘boot’, …)` to boot the Messenger.*
 
 1. To make sure people always receive the most relevant messages from you, send an update call using `window.Intercom("update")` to Intercom whenever the view and/or URL changes in your app.
 1. Almost there! Log in to your app in your development environment to test out the installation. You should see a feedback window popup in the bottom right hand corner.
