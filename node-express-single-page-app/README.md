@@ -20,7 +20,7 @@ This repo is an example application of the Intercom Messenger on a Node single p
    - A hash based on the user’s email and your Intercom identity verification secret key like ([see code](https://github.com/intercom/intercom-install-examples/blob/b61c0e4d1f3dd27a0bee3ee5688902355e48e348/node-express-single-page-app/app.js#L23)). If you want more info on why this is important, check out [this doc](https://docs.intercom.com/configure-intercom-for-your-product-or-site/staying-secure/enable-identity-verification-on-your-web-product).
 
 **On the client side**, connect to Intercom and load the Messenger:
-1. Paste the code right before the closing body tag of every page where you want the Intercom Messenger to appear like ([see code](https://github.com/intercom/intercom-install-examples/blob/b61c0e4d1f3dd27a0bee3ee5688902355e48e348/node-express-single-page-app/public/index.html#L19).
+1. Paste the code right before the closing body tag of every page where you want the Intercom Messenger to appear like ([see code](https://github.com/intercom/intercom-install-examples/blob/b61c0e4d1f3dd27a0bee3ee5688902355e48e348/node-express-single-page-app/public/index.html#L19)).
 
     *If you have already installed the Intercom Messenger on a page you want to track logged-in users on, remove the `window.intercomSettings` part as we will be using `window.Intercom('boot', …)` to boot the Messenger.*
 
