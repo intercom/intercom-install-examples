@@ -8,7 +8,7 @@ var INTERCOM_APP_ID = 'YOUR_APP_ID';
 
 var app = express();
 
-app.set('view engine', 'pug')
+app.set('view engine', 'hbs')
 
 // 2. Fake user loading middleware
 app.use(function(req, res, next) {
